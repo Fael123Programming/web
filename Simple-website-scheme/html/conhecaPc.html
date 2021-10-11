@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Conheça seu computador</title>
+    <link rel="stylesheet" type="text/css" href="../css/conhecaStyle.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/homeStyle.css"/>
+    <script> //Quando o usuário clicar na tela,o iframe volta para seu cabeçalho
+        function turnBack(){
+            let iframe=document.getElementById("windowContent");
+            iframe.src="conhecaPlus.html#cabecInfo";
+        }
+    </script>
+    <base href="index.html" target="_self">
+</head>
+<body onclick="turnBack()">
+    <div id="interface">
+        <header id="myHeader">
+            <h1>Projeto Ciência da Computação 1.0.0</h1>
+            <nav id="myMenu">
+                <ul type="none">
+                    <h1>Menu</h1> 
+                    <li> <a href="index.html" target="_self">Home</a></li>
+                    <li><a href="programacao.html" target="_self">Programação</a></li>
+                    <li><a href="conhecaPc.html" target="_self">Conheça seu computador</a></li>
+                    <li><a href="imagens.html" target="_self">Imagens</a></li>
+                    <li><a href="faleConosco.html" target="_self">Fale conosco</a></li> 
+                </ul>
+            </nav>
+        </header>
+        <section id="mainSection">
+            <header id="headerSec">
+                <h1>Venha aprender um pouco sobre sua máquina</h1>
+                <h3>Clique nos tópicos em vermelho para ler sobre</h3>
+            </header>
+            <img src="../images/alreadyImageMap.png" alt="Imagem de computador" usemap="#myMap"/>
+            <map name="myMap">
+                <area shape="rect" coords="196,280,329,297" href="conhecaPlus.html#input" target="mainIframe"/>
+                <area shape="rect" coords="139,228,215,243" href="conhecaPlus.html#processing" target="mainIframe"/>
+                <area shape="rect" coords="286,229,367,245" href="conhecaPlus.html#storage" target="mainIframe"/>
+                <area shape="rect" coords="197,134,314,156" href="conhecaPlus.html#output" target="mainIframe"/>
+            </map>
+            <iframe src="conhecaPlus.html" name="mainIframe" id="windowContent" scolling="no"></iframe>
+        </section>
+        <footer id="myFooter">
+            <p> <a href="https://www.facebook.com" target="_blank">Facebook</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="https://www.instagram.com" target="_blank">Instagram</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="https://www.whatsapp.com" target="_blank">WhatsApp</a></p>
+            <p>By Rafael Fonseca</p>
+        </footer>
+    </div>
+</body>
+</html>

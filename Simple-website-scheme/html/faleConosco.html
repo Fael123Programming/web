@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Fale conosco</title>
+    <link rel="stylesheet" type="text/css" href="../css/faleStyle.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/homeStyle.css"/>
+    <base href="index.html" target="_self">
+</head>
+<body onload="document.querySelector('#name').focus()">
+    <div id="interface">
+        <header id="myHeader">
+            <h1>Projeto Ciência da Computação 1.0.0</h1>
+            <nav id="myMenu">
+                <ul type="none">
+                    <h1>Menu</h1> 
+                    <li> <a href="index.html" target="_self">Home</a></li>
+                    <li><a href="programacao.html" target="_self">Programação</a></li>
+                    <li><a href="conhecaPc.html" target="_self">Conheça seu computador</a></li>
+                    <li><a href="imagens.html" target="_self">Imagens</a></li>
+                    <li><a href="faleConosco.html" target="_self">Fale conosco</a></li> 
+                </ul>
+            </nav>
+        </header>
+        <section id="mainSection">
+            <article id="formArticle">
+                <header id="formHeader">
+                    <h1>Preencha os campos abaixo e envie-nos uma mensagem (dúvidas,sugestões,...)</h1>
+                </header>
+                <form method="POST" id="userForm" action="mailto:rafaelfonseca1020@gmail.com">
+                    <fieldset id="identity">
+                        <legend>Identificação</legend>
+                        <p>
+                            <label for="name">Nome:&nbsp;</label>
+                            <input type="text" placeholder="Nome completo" maxlength="40" size="20" name="nameInput" id="name"/>
+                        </p>
+                        <p>
+                            <label for="age">Idade:&nbsp;</label>
+                            <input type="number" min="0" max="120" name="ageInput" id="age"/>
+                        </p>
+                        <fieldset id="genderField">
+                            <legend>Sexo</legend>
+                            <p>
+                                <input type="radio" name="genderInput" id="male" checked/>
+                                <label for="male">Masculino</label>
+                                <input type="radio" name="genderInput" id="female"/>
+                                <label for=female>Feminino</label>
+                            </p>
+                        </fieldset>
+                        <p>
+                            <label for="bornDate">Data de nascimento: </label>&nbsp;
+                            <input type="date" name="bornDateInput" id="bornDate"/>
+                        </p>
+                        <p>
+                            <label for="email">E-mail:&nbsp;</label>
+                            <input type="email" size="20" placeholder="Para conversarmos :)" maxlength="40" name="emailInput" id="email"/>
+                        </p>
+                        <p>
+                            <label for="tiQuestion">Trabalha com TI?&nbsp;</label>
+                            <input type="checkbox" name="tiQuestionInput" id="tiQuestion" onclick="showInput()"/>&nbsp;
+                            <input type="text" size="20" placeholder="Qual sua área?" maxlength="35" name="tiProfessionsInput" id="tiProfessions" list="tiProfessionsList"/>
+                            <datalist id="tiProfessionsList">
+                                <option value="Administração de Banco de Dados"></option>
+                                <option value="Administração de Redes"></option>
+                                <option value="Cloud Computing"></option>
+                                <option value="Ciência de dados"></option>
+                                <option value="Gerência de TI"></option>
+                                <option value="Inteligência Artificial"></option>
+                                <option value="Programação e desenvolvimento"></option>
+                                <option value="Qualidade de Software"></option>
+                                <option value="Segurança da Informação"></option>
+                                <option value="Suporte Técnico"></option>
+                            </datalist>
+                            <script>
+                                function showInput(){
+                                    let tiProfessions=document.querySelector("#tiProfessions");
+                                    if(document.querySelector("#tiQuestion").checked)tiProfessions.style.visibility="visible";
+                                    else tiProfessions.style.visibility="hidden";
+                                };
+                            </script>
+                        </p>
+                    </fieldset>
+                    <fieldset id="address">
+                        <legend>Endereço</legend>
+                        <p>
+                            <label for="publicPlace">Logradouro:&nbsp;</label>
+                            <input type="text" placeholder="Av,Rua,Bairro..." size="20" maxlength="80" name="publicPlaceInput" id="publicPlace"/>
+                        </p>
+                        <p>
+                            <label for="houseNumber">Número residencial: &nbsp;</label>
+                            <input type="number" min="0" max="99999" placeholder="Nº" name="houseNumberInput" id="houseNumber"/>
+                        </p>
+                        <p>
+                            <label for="state">Estado:&nbsp;</label>
+                            <select name="stateSelect" id="state">
+                                <optgroup label="Região Norte">
+                                    <option value="AC">Acre</option>
+                                    <option value="AP">Amapá</option>
+                                    <option value="AM">Amazonas</option>
+                                    <option value="PA">Pará</option>
+                                    <option value="RO">Rondônia</option>
+                                    <option value="RR">Roraima</option>
+                                    <option value="TO">Tocantins</option>
+                                </optgroup>
+                                <optgroup label="Região Nordeste">
+                                    <option value="AL">Alagoas</option>
+                                    <option value="BA">Bahia</option>
+                                    <option value="CE">Ceará</option>
+                                    <option value="MA">Maranhão</option>
+                                    <option value="PB">Paraíba</option>
+                                    <option value="PE">Pernambuco</option>
+                                    <option value="PI">Piauí</option>
+                                    <option value="RN">Rio Grande do Norte</option>
+                                    <option value="SE">Sergipe</option>
+                                </optgroup>
+                                <optgroup label="Região Centro-Oeste">
+                                    <option value="DF">Distrito Federal</option>
+                                    <option value="GO">Goiás</option>
+                                    <option value="MT">Mato Grosso</option>
+                                    <option value="MS">Mato Grosso do Sul</option>
+                                </optgroup>
+                                <optgroup label="Região Sudeste">
+                                    <option value="ES">Espírito Santo</option>
+                                    <option value="MG">Minas Gerais</option>
+                                    <option value="RJ">Rio de Janeiro</option>
+                                    <option value="SP">São Paulo</option>
+                                </optgroup>
+                                <optgroup label="Região Sul">
+                                    <option value="PR">Paraná</option>
+                                    <option value="RS">Rio Grande do Sul</option>
+                                    <option value="SC">Santa Catarina</option>
+                                </optgroup>
+                            </select>
+                        </p>
+                        <p>
+                            <label for="city">Cidade:&nbsp;</label>
+                            <input type="text" name="cityInput" id="city" size="20" maxlength="30" list="mainCities" placeholder="Sua cidade"/>
+                            <datalist id="mainCities">
+                                <option value="Aracaju"></option>
+                                <option value="Belém"></option>
+                                <option value="Belo Horizonte"></option>
+                                <option value="Boa Vista"></option>
+                                <option value="Brasília"></option>
+                                <option value="Campo Grande"></option>
+                                <option value="Cuiabá"></option>
+                                <option value="Curitiba"></option>
+                                <option value="Florianópolis"></option>
+                                <option value="Fortaleza"></option>
+                                <option value="Goiânia"></option>
+                                <option value="João Pessoa"></option>
+                                <option value="Macapá"></option>
+                                <option value="Maceió"></option>
+                                <option value="Manaus"></option>
+                                <option value="Natal"></option>
+                                <option value="Palmas"></option>
+                                <option value="Porto Alegre"></option>
+                                <option value="Porto Velhos"></option>
+                                <option value="Recife"></option>
+                                <option value="Rio Branco"></option>
+                                <option value="Rio de Janeiro"></option>
+                                <option value="Salvador"></option>
+                                <option value="São Luís"></option>
+                                <option value="São Paulo"></option>
+                                <option value="Teresina"></option>
+                                <option value="Vitória"></option>
+                            </datalist>
+                        </p>
+                    </fieldset>
+                    <fieldset id="message">
+                        <legend>Mensagem</legend>
+                        <p>
+                            <label for="msgUrgency">Nível de urgência:</label>&nbsp;Min
+                            <input type="range" min="0" max="10" step="2" name="msgUrgencyInput" id="msgUrgency"/>Max
+                        </p>
+                        <p>
+                            <label for="userMsg">Mensagem:&nbsp;</label>
+                            <textarea cols="30" rows="5" placeholder="Aqui vem sua messagem" maxlength="200"></textarea>
+                        </p>
+                    </fieldset>
+                    <p>
+                        <input type="submit" value="Enviar" name="buttonInput" id="button" onclick="window.location='faleConosco.html'"/>
+                    </p>
+                </form>
+            </article>
+        </section>
+        <footer id="myFooter">
+            <p> <a href="https://www.facebook.com" target="_blank">Facebook</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="https://www.instagram.com" target="_blank">Instagram</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="https://www.whatsapp.com" target="_blank">WhatsApp</a></p>
+            <p>By Rafael Fonseca</p>
+        </footer>
+    </div>
+</body>
+</html>
