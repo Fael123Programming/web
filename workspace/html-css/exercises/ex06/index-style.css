@@ -1,0 +1,26 @@
+body {
+    background-color: gray;
+}
+
+#header-div {
+    border: 1px solid black;
+    width: 500px;
+    text-transform: capitalize;
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    text-shadow: 1px 1px 1px black;
+    margin: 20px auto;
+    background-color: orange;
+    box-shadow: 3px 3px 3px black;
+}
+
+#images-sec {
+    background-color: rgb(179, 179, 179);
+    width: 500px;
+    margin: 10px auto;
+    box-shadow: 3px 3px 3px black;
+}
+
+#images-ul{
+    text-align: center;
+}

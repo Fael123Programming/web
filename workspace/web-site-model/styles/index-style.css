@@ -1,0 +1,77 @@
+html { /*Single selection and element or tag selection*/
+    font-size: 10px;
+    background-color: #00539F;
+    font-family: 'Dancing Script', cursive;
+}
+
+h1 {
+    font-size: 60px;
+    text-align: center;
+    text-shadow: 2px 2px 2px black;
+    margin: 0;
+    padding: 20px 0;
+    color:#00539F;
+    border: none;
+}
+
+p, li { /*Multiple selection*/
+    font-size: 16px;
+    line-height: 2;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+body {
+    background-color: #FF9500;
+    /*Actually, there are three basic types of colours in CSS:
+    Hex code colors (used above), RGB (Red, Green and Blue) colors and
+    HSB (Hue, Saturation and Brightness) colours*/
+    width: 700px;
+    margin: 0 auto; /*auto divides the available horizontal space evenly between left and right*/
+    padding: 0 20px 20px 20px;
+    border: 5px solid black;
+    text-align: center;
+}
+
+.spaced-p { /*Class selection*/
+    width: 700px;
+}
+
+img {
+    /*To put an img centered in its outter block*/
+    display: block;
+    /*As an img is an inline element, for the auto margin trick to take affect, 
+    we must give it block-level behaviour using display: block.
+    Some elements such as the body itself, does not need it because it is already
+    a block and not an inline element.*/
+    margin: 0 auto;
+}
+
+
+#anchor-google-dev { /*ID selection: unique element on the page*/
+    text-transform: uppercase; /*Casing statements*/
+    text-decoration: none; /*Text decoration such as underlines and more*/
+    color: black;
+}
+
+#p-anchor {
+    transition: all 2s ease-out;
+}
+
+#p-anchor:hover {
+    background-color: yellow;
+    border: 1px solid black;
+}
+
+img { 
+    border: 3px solid white;
+    transition: all 1s ease-out;
+    /*Transitions enable you to define the transition between two states of an element.
+    Different states may be defined using pseudo-classes like :hover or :active or dyna-
+    mically set using JavaScript.*/
+}
+
+img:hover { /*Pseudo-class selection: the specified element but only when in the specified state*/
+    /*hover is the state of an element being pointed by a mouse*/
+    border: 3px solid black;
+}
